@@ -82,6 +82,7 @@ function Profile() {
       <Header />
 
       <Flex gap="32px" padding="0px 48px">
+        {/* when click the message box change only the center of the page and open a chat */}
         <Box mr={8} mt={8} w='350px' textAlign='center'>
               <Text fontSize="22px" mt={3} fontWeight={700}>Messages</Text>
                   <hr
@@ -90,7 +91,7 @@ function Profile() {
                   opacity: "0.1",
                   }}
               />
-            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' backgroundColor="rgba(169, 169, 169, 0.2)" justifyContent='space-between'>
+            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' backgroundColor="rgba(169, 169, 169, 0.2)" justifyContent='space-between' _hover={{cursor:'pointer'}}>
               
             <Box display='flex'>
               <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
@@ -104,7 +105,7 @@ function Profile() {
 
             </Box>
 
-            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between'>
+            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between' _hover={{cursor:'pointer'}}>
               <Box display='flex'>
                 <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
                 <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
@@ -124,6 +125,7 @@ function Profile() {
                 USER_NAME Profile
             </Text>
             
+                {/* This is the link for where we make a new post */}
             <SimpleGrid mt={3} columns={[1, 2, 3, 4, 5]}>
             <Box w="280px" h="366px" position="relative">
                 <Box>
@@ -166,13 +168,10 @@ function Profile() {
         />
 
           {/* map info from API to display on profile page */}
+          {/* When the image are clicked open a floating centered div for the user info */}
           <Box mr={8} mt={8} textAlign='center'>
             <Center><Image src='/assets/profile-landing.png' /></Center>
             <Text mt={5} fontSize='20px' fontWeight={700}>USER_NAME</Text>
-            <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>USER_INFO</Text>
-            <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>USER_INFO</Text>
-            <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>USER_INFO</Text>
-            <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>USER_INFO</Text>
           </Box>
 
         </Box>

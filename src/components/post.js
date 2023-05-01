@@ -38,15 +38,17 @@ function Post({ post }) {
         <Text fontWeight={600}>{post.platform}</Text>
       </Box>
 
-      <Box as="a" href={`/browse/${post.id}`}>
-        <Image
-          borderRadius="8px"
-          w="280px"
-          h="256px"
-          fit="cover"
-          src={post.thumbnail}
-          _hover={{ cursor: "pointer" }}
-        />
+      <Box>
+        <Link href={`/browse/${post.id}`}>
+          <Image
+            borderRadius="8px"
+            w="280px"
+            h="256px"
+            fit="cover"
+            src={post.thumbnail}
+            _hover={{ cursor: "pointer" }}
+          />
+        </Link>
       </Box>
 
       <Text fontSize="18px" mt={3} fontWeight={700}>

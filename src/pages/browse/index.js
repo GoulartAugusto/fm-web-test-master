@@ -43,6 +43,9 @@ function Browse() {
   return (
     <Box>
       <Header />
+      {/* the app info like images and text are getting overlaid on each other */}
+
+      {/* have to change de behavior of the app on different sizes of screen | possibilly with Tailwind */}
 
       <Flex gap="32px" padding="0px 48px">
         <Box width="400px" height="489px">
