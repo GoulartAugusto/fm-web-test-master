@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import DropdownIcon from "@/components/icon/dropdown";
 import PaginationSelect from "../../components/paginationSelect";
 import Post from "../../components/post";
+import samplePosts from '../../components/posts/samplePosts'
 
 function Browse() {
   const [sortMethod, setSortMethod] = useState("popularity");
@@ -20,20 +21,7 @@ function Browse() {
   const [fullBody, setFullBody] = useState(true); // boolean
   const [platform, setPlatform] = useState("all");
 
-  const samplePosts = [
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-  ];
+  const data = samplePosts.map(samplePost => samplePost.id);
 
   useEffect(() => {
     // this will execute when any state value is changed (and when dom loads)

@@ -1,9 +1,262 @@
-import React from 'react'
+import {
+  Box,
+  Center,
+  Flex,
+  Spinner,
+  Text,
+  Image,
+  SimpleGrid,
+  Heading,
+  Badge,
+  Avatar,
+  Icon,
+  Button,
+  FormControl,
+  Input,
+  VStack,
+} from "@chakra-ui/react";
+import Header from "../../components/header";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { AiOutlineDownload, AiFillHeart } from "react-icons/ai";
+import { LOCALE_EN } from "@/constants/locale";
 
-function addpost() {
+function addpost({ id }) {
+  const router = useRouter();
+  const [post, setPost] = useState({});
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div>addpost</div>
-  )
+    <Box>
+
+      <Header />
+
+        <Center mt={30} mb={50}>
+          <Flex gap="26px" position="relative" w="90vw">
+            <Box position="absolute" top={0} right={0}>
+              <VStack alignItems="left" spacing={5}>
+
+                <Box
+                  p="24px"
+                  w="300px"
+                  h="260px"
+                  bg="rgba(0, 0, 0, 0.17)"
+                  borderRadius="16px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Box w="100%">
+                    <Text fontWeight={700}>Model Details</Text>
+
+                    <VStack mt={3} spacing={1} w="100%">
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          NSFW:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                          <select style={{background:'black'}}>
+                            <option>any</option>
+                            <option>yes</option>
+                            <option>no</option>
+                          </select>
+                        </Text>
+
+                      </Flex>
+
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          SDK:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                          <select style={{background:'black'}}>
+                            <option>any</option>
+                            <option>3.0</option>
+                            <option>2.0</option>
+                          </select>
+                        </Text>
+                      </Flex>
+
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          Platform:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                          <select style={{background:'black'}}>
+                            <option>any</option>
+                            <option>PC</option>
+                          </select>
+                        </Text>
+                      </Flex>
+
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          Full Body:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                          <select style={{background:'black'}}>
+                            <option>no</option>
+                            <option>yes</option>
+                          </select>
+                        </Text>
+                      </Flex>
+
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          Physbones:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                        <select style={{background:'black'}}>
+                            <option>no</option>
+                            <option>yes</option>
+                          </select>
+                        </Text>
+                      </Flex>
+
+                      <Flex w="100%" alignItems="center" position="relative">
+                        <Text fontWeight={700} color="#F01B67">
+                          DPS:
+                        </Text>
+                        <Text position="absolute" right={0}>
+                        <select style={{background:'black'}}>
+                            <option>no</option>
+                            <option>yes</option>
+                          </select>
+                        </Text>
+                      </Flex>
+                    </VStack>
+                  </Box>
+                </Box>
+              </VStack>
+            </Box>
+
+            <Box w="287.6px">
+              <Text fontSize='26px' fontWeight='700' mb='1rem'>Upload Avatar Images</Text>
+              <Image borderRadius="8px" src={post.thumbnail} />
+                <Image w="400.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+              <SimpleGrid mt={4} columns={2} spacing={4}>
+                <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+                <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+                <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+                <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+              </SimpleGrid>
+            </Box>
+
+            <Box>
+              <Heading>
+                <Input type="text" placeholder="Avatar Name" />
+              </Heading>
+
+              <Flex mt={5} alignItems="center" gap="16px">
+                <Input type="text" placeholder="insert tags" />
+                <Button
+                  bg="#F01B67"
+                  borderRadius="67px"
+                  w="52px"
+                  h="52px"
+                  fontSize="52px"
+                  fontWeight={700}
+                  _hover={{ bg: "#F01B67", opacity: "75%" }}
+                >
+                +
+              </Button>
+
+                <Badge textTransform="initial">tag</Badge>;
+              </Flex>
+
+              <Flex mt={5} alignItems="center" gap="16px">
+                <Avatar />
+
+                <Text fontWeight={700} fontSize="18px">
+                  user_name
+                </Text>
+              </Flex>
+
+              <Flex
+                mt={5}
+                p="24px"
+                bg="rgba(0, 0, 0, 0.17)"
+                borderRadius="8px"
+                flexDir="row"
+                gap="39px"
+                w="584px"
+                h="104px"
+              >
+                <Box>
+                  <Text fontSize="16px" fontWeight={700}>
+                    File name
+                  </Text>
+
+                  <Text fontSize="16px" color="#BA769A" mt="8px">
+                    
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="16px" fontWeight={700}>
+                    Checksum
+                  </Text>
+
+                  <Text fontSize="16px" color="#BA769A" mt="8px">
+                    
+                  </Text>
+                </Box>
+
+                <Box>
+                  <Text fontSize="16px" fontWeight={700}>
+                    Size
+                  </Text>
+
+                  <Text fontSize="16px" color="#BA769A" mt="8px">
+                    ???
+                  </Text>
+                </Box>
+
+                <Box w="100%" position="relative">
+                  <Text
+                    fontWeight={700}
+                    _hover={{ opacity: "75%", cursor: "pointer" }}
+                    position="absolute"
+                    bottom={0}
+                    right={0}
+                    color="#F01B67"
+                    as="a"
+                    fontSize="16px"
+                    mt="8px"
+                  >
+                    <Text
+                    fontWeight={700}
+                    _hover={{ opacity: "75%", cursor: "pointer" }}
+                    position="absolute"
+                    bottom={0}
+                    right={0}
+                    color="#F01B67"
+                    fontSize="16px"
+                    mt="8px"
+                    >Upload file</Text>
+                  </Text>
+                </Box>
+                <Input type="file" />
+
+              </Flex>
+
+              <Box bg="rgba(0, 0, 0, 0.17)" borderRadius="16px" p="24px" mt={7}>
+                <Text fontSize="18px" fontWeight={700}>
+                  Description
+                </Text>
+
+                <Text color="#BA769A" mt={2} width="700px">
+                  <Input
+                    type="text"
+                    h='280px'
+                  />
+                </Text>
+              </Box>
+            </Box>
+          </Flex>
+        </Center>
+    </Box>
+  );
 }
 
-export default addpost
+export default addpost;

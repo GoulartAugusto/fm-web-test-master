@@ -13,12 +13,16 @@
     "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "firebase": "^9.21.0",
+    "firebase-tools": "^11.29.1",
     "framer-motion": "^10.12.2",
     "next": "13.3.0",
     "next-compose-plugins": "^2.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.0",
     "react-syntax-highlighter": "^15.5.0"
   }
 }

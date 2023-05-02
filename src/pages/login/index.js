@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Box,
   Center,
@@ -13,7 +15,30 @@ import {
 import Header from "../../components/header";
 import { LOCALE_EN } from "../../constants/locale";
 
+/* firebase for test the app */
+
+import React, { useState } from "react";
+import signIn from "@/firebase/auth/signin";
+
 function LoginPage() {
+  /* this lines before return that makes firebase auth work*/
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [username, setUserName] = useState('');
+
+  const handleForm = async (event) => {
+    event.preventDefault()
+
+    const { result, error } = await signIn(email, username, password);
+
+    if (error) {
+        return console.log(error)
+    }
+
+    // else successful
+    console.log(result)
+}
+
   return (
     <Box>
       <Header />
@@ -46,12 +71,12 @@ function LoginPage() {
           >
             <Box w="450px">
               <FormControl>
-                <FormLabel>{LOCALE_EN.generic.username}</FormLabel>
+                <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.username}</FormLabel>
                 <Input bg="rgba(0, 0, 0, 0.17)" outline="none" border="none" />
               </FormControl>
 
               <FormControl mt={7}>
-                <FormLabel>{LOCALE_EN.generic.password}</FormLabel>
+                <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.password}</FormLabel>
                 <Input
                   bg="rgba(0, 0, 0, 0.17)"
                   outline="none"
