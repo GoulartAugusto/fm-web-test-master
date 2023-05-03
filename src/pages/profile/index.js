@@ -20,6 +20,8 @@ import Link from "next/link";
 
 import { LOCALE_EN } from "../../constants/locale";
 
+// This page is only avaliable after login
+
 
 function Profile() {
     const [sortMethod, setSortMethod] = useState("popularity");
@@ -93,13 +95,15 @@ function Profile() {
               />
             <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' backgroundColor="rgba(169, 169, 169, 0.2)" justifyContent='space-between' _hover={{cursor:'pointer'}}>
               
-            <Box display='flex'>
-              <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
-              <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
-                <Text fontSize='16px' fontWeight={700}>Elisabeth</Text>
-                <Text fontSize='16px'>ur mom lmao</Text>
+            <Link href='/messages'>
+              <Box display='flex'>
+                <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
+                <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
+                  <Text fontSize='16px' fontWeight={700}>Elisabeth</Text>
+                  <Text fontSize='16px'>ur mom lmao</Text>
+                </Box>
               </Box>
-            </Box>
+            </Link>
 
               <Text fontSize='16px' opacity='45%' fontWeight={400} mt='-28px' mr='1rem'>2h ago</Text>
 
@@ -129,7 +133,7 @@ function Profile() {
             <SimpleGrid mt={3} columns={[1, 2, 3, 4, 5]}>
             <Box w="280px" h="366px" position="relative">
                 <Box>
-                    <Link href={'/profile/addpost'}>
+                    <Link href={'profile/newpost/addpost'}>
                         <Image
                             borderRadius="8px"
                             w="280px"

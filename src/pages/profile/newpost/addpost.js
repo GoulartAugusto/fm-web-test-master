@@ -14,11 +14,12 @@ import {
   FormControl,
   Input,
   VStack,
+  Textarea,
 } from "@chakra-ui/react";
-import Header from "../../components/header";
+import Header from "../../../components/header";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { AiOutlineDownload, AiFillHeart } from "react-icons/ai";
+import { AiOutlineDownload, AiFillHeart, AiOutlineUpload } from "react-icons/ai";
 import { LOCALE_EN } from "@/constants/locale";
 
 function addpost({ id }) {
@@ -124,6 +125,19 @@ function addpost({ id }) {
                           </select>
                         </Text>
                       </Flex>
+                      <Button
+                          bg="#F01B67"
+                          mt={5}
+                          borderRadius="67px"
+                          w="225px"
+                          h="52px"
+                          fontSize="16px"
+                          fontWeight={700}
+                          leftIcon={<Icon as={AiOutlineUpload} w="24px" h="24px" />}
+                          _hover={{ bg: "#F01B67", opacity: "75%" }}
+                        >
+                        Upload Avatar
+                      </Button>
                     </VStack>
                   </Box>
                 </Box>
@@ -132,8 +146,7 @@ function addpost({ id }) {
 
             <Box w="287.6px">
               <Text fontSize='26px' fontWeight='700' mb='1rem'>Upload Avatar Images</Text>
-              <Image borderRadius="8px" src={post.thumbnail} />
-                <Image w="400.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
+                <Image w="400px" borderRadius="8px" src={"/assets/plus-sign.png"} />
               <SimpleGrid mt={4} columns={2} spacing={4}>
                 <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
                 <Image w="135.51px" borderRadius="8px" src={"/assets/plus-sign.png"} />
@@ -144,24 +157,20 @@ function addpost({ id }) {
 
             <Box>
               <Heading>
-                <Input type="text" placeholder="Avatar Name" />
+                <Input type="text" size='lg' placeholder="Avatar Name" />
               </Heading>
 
               <Flex mt={5} alignItems="center" gap="16px">
-                <Input type="text" placeholder="insert tags" />
-                <Button
-                  bg="#F01B67"
-                  borderRadius="67px"
-                  w="52px"
-                  h="52px"
-                  fontSize="52px"
-                  fontWeight={700}
-                  _hover={{ bg: "#F01B67", opacity: "75%" }}
-                >
-                +
-              </Button>
+                <Input type="text" placeholder="Type some tags" />
+              </Flex>
 
-                <Badge textTransform="initial">tag</Badge>;
+              <Flex mt={5} alignItems="center" gap="16px">
+
+                <Badge textTransform="initial">tag1</Badge>
+                <Badge textTransform="initial">tag2</Badge>
+                <Badge textTransform="initial">tag3</Badge>
+
+
               </Flex>
 
               <Flex mt={5} alignItems="center" gap="16px">
@@ -208,7 +217,7 @@ function addpost({ id }) {
                   </Text>
 
                   <Text fontSize="16px" color="#BA769A" mt="8px">
-                    ???
+                    
                   </Text>
                 </Box>
 
@@ -233,11 +242,9 @@ function addpost({ id }) {
                     color="#F01B67"
                     fontSize="16px"
                     mt="8px"
-                    >Upload file</Text>
+                    >Browse files</Text>
                   </Text>
                 </Box>
-                <Input type="file" />
-
               </Flex>
 
               <Box bg="rgba(0, 0, 0, 0.17)" borderRadius="16px" p="24px" mt={7}>
@@ -246,9 +253,11 @@ function addpost({ id }) {
                 </Text>
 
                 <Text color="#BA769A" mt={2} width="700px">
-                  <Input
+                  <Textarea
                     type="text"
-                    h='280px'
+                    h='162px'
+                    placeholder="Make an description for your Avatar"
+                    resize='none'
                   />
                 </Text>
               </Box>
