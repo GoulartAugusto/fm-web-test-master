@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Box,
   Center,
@@ -27,14 +25,6 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { LOCALE_EN } from "@/constants/locale";
 import { Config } from "@/constants/config";
 
-// using firebase for testing
-
-import signUp from "@/firebase/auth/signup";
-import { useRouter } from 'next/navigation';
-
-// If we decide to continue the old code just delete every handleForm on inputs and make it work
-
-
 function RegisterPage() {
   /*
     Page index: 
@@ -43,24 +33,7 @@ function RegisterPage() {
         2 - Optional avatar upload
   */
 
-        /* from here firebase configuration */
-        /* on each FormLabel set onSubmit={handleForm}*/
-
-        const handleForm = async (event) => {
-          // event.preventDefault()
   
-          const { result, error } = await signUp(email, username, password);
-  
-          if (error) {
-              return console.log(error)
-          }
-  
-          // else successful
-          console.log(result)
-      }
-
-  /* to here */
-
   // If there's no better option just comment out the old code an continue to make it work
 
   const toast = useToast();
@@ -81,58 +54,57 @@ function RegisterPage() {
   const [pronounsInvalid, setPronounsInvalid] = useState(false);
   const [coppa, setCOPPA] = useState(false);
 
-      // here is the old code, try to make it work or delete it
+  // here is the old code
+   const submitForm = async () => {
+     // validate all fields are filled
+     if (
+       pronouns1 === "" ||
+       pronouns2 === "" ||
+       email === "" ||
+       password === "" ||
+       username === ""
+     )
+       return toast({
+         title: "Error",
+         description: "Please fill out all fields.",
+         status: "error",
+         duration: 5000,
+         isClosable: true,
+         position: "bottom-right",
+       });
 
-  // const submitForm = async () => {
-  //   // validate all fields are filled
-  //   if (
-  //     pronouns1 === "" ||
-  //     pronouns2 === "" ||
-  //     email === "" ||
-  //     password === "" ||
-  //     username === ""
-  //   )
-  //     return toast({
-  //       title: "Error",
-  //       description: "Please fill out all fields.",
-  //       status: "error",
-  //       duration: 5000,
-  //       isClosable: true,
-  //       position: "bottom-right",
-  //     });
+     // make request
+     (async () => {
+       let res = await fetch(`${Config.API_V1}/identity/@create`, {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify({
+           username,
+           email,
+           password,
+           pronouns: [pronouns1, pronouns2],
+           coppa,
+         }),
+       }).catch((e) => {
+         // handle error
+       });
 
-  //   // make request
-  //   (async () => {
-  //     let res = await fetch(`${Config.API_V1}/identity/@create`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         username,
-  //         email,
-  //         password,
-  //         pronouns: [pronouns1, pronouns2],
-  //         coppa,
-  //       }),
-  //     }).catch((e) => {
-  //       // handle error
-  //     });
+       let data = await res.json().catch((e) => {
+         // handle error
+       console.log(error.message)
+       });
 
-  //     let data = await res.json().catch((e) => {
-  //       // handle error
-  //       console.log(error.message)
-  //     });
+       if (!res.ok) {
+         // handle error
+         console.log(error.message)
+       }
 
-  //     if (!res.ok) {
-  //       // handle error
-  //       console.log(error.message)
-  //     }
-
-  //     // handle (possible) error from json
-  //     console.log()
-  //   })();
-  // };
+       // handle (possible) error from json
+       console.log()
+     })();
+   };
 
   return (
     <Box>
@@ -205,7 +177,7 @@ function RegisterPage() {
                 {page === 0 ? (
                   <>
                     <FormControl isInvalid={usernameInvalid} isRequired>
-                      <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.username}</FormLabel>
+                      <FormLabel>{LOCALE_EN.generic.username}</FormLabel>
                       <Input
                         bg="rgba(0, 0, 0, 0.17)"
                         outline="none"
@@ -249,7 +221,7 @@ function RegisterPage() {
                 ) : page === 1 ? (
                   <>
                     <FormControl isInvalid={emailInvalid} isRequired>
-                      <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.email}</FormLabel>
+                      <FormLabel>{LOCALE_EN.generic.email}</FormLabel>
                       <Input
                         bg="rgba(0, 0, 0, 0.17)"
                         outline="none"
@@ -264,7 +236,7 @@ function RegisterPage() {
                     </FormControl>
 
                     <FormControl isInvalid={passwordInvalid} mt={7} isRequired>
-                      <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.password}</FormLabel>
+                      <FormLabel>{LOCALE_EN.generic.password}</FormLabel>
                       <Input
                         bg="rgba(0, 0, 0, 0.17)"
                         outline="none"
@@ -330,7 +302,7 @@ function RegisterPage() {
                       isRequired
                       mt={7}
                     >
-                      <FormLabel onSubmit={handleForm}>{LOCALE_EN.generic.pronouns}</FormLabel>
+                      <FormLabel>{LOCALE_EN.generic.pronouns}</FormLabel>
 
                       <SimpleGrid columns={2} gap="16px">
                         <Input
