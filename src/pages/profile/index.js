@@ -93,23 +93,21 @@ function Profile() {
                   opacity: "0.1",
                   }}
               />
-            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' backgroundColor="rgba(169, 169, 169, 0.2)" justifyContent='space-between' _hover={{cursor:'pointer'}}>
-              
-            <Link href='/messages'>
-              <Box display='flex'>
-                <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
-                <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
-                  <Text fontSize='16px' fontWeight={700}>Elisabeth</Text>
-                  <Text fontSize='16px'>ur mom lmao</Text>
+
+            <Link href='/profile/messages/'>
+              <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between' _hover={{cursor:'pointer', bg:"#a9a9a999"}}>
+                <Box display='flex'>
+                  <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
+                  <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
+                    <Text fontSize='16px' fontWeight={700}>Elisabeth</Text>
+                    <Text fontSize='16px'>ur mom lmao</Text>
+                  </Box>
                 </Box>
+                <Text fontSize='16px' opacity='45%' fontWeight={400} mt='-28px' mr='1rem'>2h ago</Text>
               </Box>
             </Link>
 
-              <Text fontSize='16px' opacity='45%' fontWeight={400} mt='-28px' mr='1rem'>2h ago</Text>
-
-            </Box>
-
-            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between' _hover={{cursor:'pointer'}}>
+            <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between' _hover={{cursor:'pointer', bg:"#a9a9a999"}}>
               <Box display='flex'>
                 <Image src="/assets/demo/amari5.png" w='64px' h='64px' borderRadius='50%' ml='1rem' />
                 <Box paddingLeft='10px' display='flex' flexDirection='column' alignItems='start' mt='0.5rem'>
