@@ -10,8 +10,7 @@ export default extendTheme({
         userSelect: "none",
       },
       body: {
-        background:
-          'linear-gradient(180deg, #C82661 -98.52%, rgba(20, 4, 10, 0.87) 22.21%, rgba(20, 4, 10, 0.81) 85.39%, #C82661 171.03%, #C82661 171.03%), url("/assets/background.png")',
+        background: 'linear-gradient(180deg, #244234 -98.52%, #0D2017 41.87%, rgba(13, 32, 23, 0.81) 92.41%, #244234 171.03%)',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
