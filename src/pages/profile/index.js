@@ -87,12 +87,12 @@ function Profile() {
         {/* when click the message box change only the center of the page and open a chat */}
         <Box mr={8} mt={8} w='350px' textAlign='center'>
               <Text fontSize="22px" mt={3} fontWeight={700}>Messages</Text>
-                  <hr
+                <hr
                   style={{
                   marginTop: "20px",
                   opacity: "0.1",
                   }}
-              />
+                />
 
             <Link href='/profile/messages/'>
               <Box w='350px' h='88px' display='flex' alignItems='center' mt='25px' borderRadius='8px' justifyContent='space-between' _hover={{cursor:'pointer', bg:"#a9a9a999"}}>
