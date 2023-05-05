@@ -22,10 +22,10 @@ import SearchBar from "./searchBar";
 function Header() {
   return (
     <Flex d='flex' flexDir='row' alignItems='flex-start' p='0px 0px 71px' gap='8px' w='100vw' h='191px' flex='none' order='0' flexGrow='0'>
-      <Flex d='flex' flexDir='row' justifyContent='space-between' alignItems='center' p='10px 63px' gap='996px' w='100vw' h='120px' bg='linear-gradient(189.23deg, #244234 -1712.74%, rgba(0, 0, 0, 0) 257.9%)' border='0.5px solid rgba(129, 200, 38, 0.05)' flex='none' order='0' flexGrow='1'>
+      <Flex d='flex' flexDir='row' justifyContent='space-between' alignItems='center' p='10px 63px' h='120px' backg='linear-gradient(189.23deg, #244234 -1712.74%, rgba(0, 0, 0, 0) 257.9%)' border='0.5px solid rgba(129, 200, 38, 0.05)' flex='none' order='0' flexGrow='1'>
         <Flex d='flex' flexDir='row' justifyContent='space-between' alignItems='center' p='10px 63px' gap='996px' w='73vw' h='100px' flex='none' order='0' flexGrow='1'>
   
-            <Flex d='flex' flexDir='row' alignItems='center' p='0px 2px' gap='32px' w='568px' h='77px' borderRadius='8px' flex='none' order='0' flexGrow='0'>
+            <Flex d='flex' flexDir='row' alignItems='center' p='0px 2px' gap='32px' h='77px' borderRadius='8px' flex='none' order='0' flexGrow='0'>
               <Link href='/'>
                 <Image
                     src="/assets/logo.png"
@@ -66,6 +66,7 @@ function Header() {
                 >
               <Link href="/browse">{LOCALE_EN.generic.support}</Link>
               </Text>
+              
             </Flex>
 
             <Flex d='flex' flexDir='row' alignItems='center' p='16px 2px' gap='32px' w='247px' h='80px' borderRadius='8px' flex='none' order='1' flexGrow='1'>

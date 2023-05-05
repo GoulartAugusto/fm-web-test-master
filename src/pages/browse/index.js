@@ -38,7 +38,6 @@ function Browse() {
       <Flex gap="32px" padding="0px 48px">
         <Box width="400px" height="489px">
           {/* filters sidebar */}
-          <SearchBar />
 
           <hr
             style={{
@@ -49,7 +48,7 @@ function Browse() {
 
           {/* style select in theme later i cant figure it out rn */}
           <FormControl mt={5}>
-            <FormLabel>Sort by</FormLabel>
+            <FormLabel>SORT BY</FormLabel>
 
             <Select
               width="200px"
@@ -61,6 +60,22 @@ function Browse() {
               icon={<DropdownIcon />}
             >
               <option value="popularity">Popularity</option>
+            </Select>
+          </FormControl>
+
+          <FormControl mt={5}>
+            <FormLabel>NSFW</FormLabel>
+
+            <Select
+              width="200px"
+              value={nsfw}
+              onChange={(e) => setNSFW(e.currentTarget.value)}
+              outline="none"
+              border="none"
+              background="rgba(0, 0, 0, 0.17)"
+              icon={<DropdownIcon />}
+            >
+              <option value="all">All</option>
             </Select>
           </FormControl>
 
