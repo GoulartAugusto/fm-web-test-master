@@ -15,68 +15,128 @@ import {
 import Link from "next/link";
 
 import { RiArrowDropDownLine } from "react-icons/ri";
+import SearchBar from "./searchBar";
+
+// ==================== got to correct behavior on different screen sizes ===============================
 
 function Header() {
   return (
-    <Flex p="48px" width="100vw" height="176px" position="relative">
-      <Link href='/'>
-        <Image
-          src="/assets/logo.svg"
-          _hover={{ opacity: "90%", cursor: "pointer" }}
-          h='100%'
-        />
-      </Link>
+    <Flex d='flex' flexDir='row' alignItems='flex-start' p='0px 0px 71px' gap='8px' w='100vw' h='191px' flex='none' order='0' flexGrow='0'>
+      <Flex d='flex' flexDir='row' justifyContent='space-between' alignItems='center' p='10px 63px' gap='996px' w='100vw' h='120px' bg='linear-gradient(189.23deg, #244234 -1712.74%, rgba(0, 0, 0, 0) 257.9%)' border='0.5px solid rgba(129, 200, 38, 0.05)' flex='none' order='0' flexGrow='1'>
+        <Flex d='flex' flexDir='row' justifyContent='space-between' alignItems='center' p='10px 63px' gap='996px' w='73vw' h='100px' flex='none' order='0' flexGrow='1'>
+  
+            <Flex d='flex' flexDir='row' alignItems='center' p='0px 2px' gap='32px' w='568px' h='77px' borderRadius='8px' flex='none' order='0' flexGrow='0'>
+              <Link href='/'>
+                <Image
+                    src="/assets/logo.png"
+                    _hover={{ opacity: "90%", cursor: "pointer" }}
+                    h='100%'
+                  />
+              </Link>
+              <SearchBar />
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/"
+                >
+                <Link href="/">{LOCALE_EN.generic.home}</Link>
+              </Text>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/browse"
+              >
+                <Link href="/browse">{LOCALE_EN.generic.browse}</Link>
+              </Text>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/browse"
+                >
+              <Link href="/browse">{LOCALE_EN.generic.faq}</Link>
+              </Text>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/browse"
+                >
+              <Link href="/browse">{LOCALE_EN.generic.support}</Link>
+              </Text>
+            </Flex>
 
-      <Flex
-        flexDir="row"
-        alignItems="center"
-        padding="16px 32px"
-        gap="32px"
-        height="80px"
-        right="48px"
-        position="absolute"
-        bg="rgba(0, 0, 0, 0.17);"
-        borderRadius="8px"
-      >
-        <Text
+            <Flex d='flex' flexDir='row' alignItems='center' p='16px 2px' gap='32px' w='247px' h='80px' borderRadius='8px' flex='none' order='1' flexGrow='1'>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                color="#75D275"
+                fontWeight={700}
+                target="_blank"
+                href="https://discord.gg/5SeB8s6859"
+                >
+                <Link href="/profile/messages"><Image src='/assets/message-02.png' /></Link>
+              </Text>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/login"
+                >
+                <Link href="/profile/messages"><Image src='/assets/notification.png' /></Link>
+              </Text>
 
-          _hover={{ cursor: "pointer", color: "#BA769A" }}
-          fontWeight={700}
-          color="white"
-          href="/"
-        >
-          <Link href="/">{LOCALE_EN.generic.home}</Link>
-        </Text>
-        <Text
+              <Flex d='flex' flexDir='row' alignItems='center' p='0px' gap='16px' h='48px' flex='none' order='2' flexGrow='0' _hover={{ cursor: "pointer", color: "#ffffff" }}>
+                <Link href="/profile"><Image src='/assets/profile-thumbnail.png' w='48px' h='48px' borderRadius='50%' /></Link>
+                <Text fontWeight={700} color="#75D275" _hover={{ cursor: "pointer", color: "#ffffff" }}>
+                  Civv
 
-          _hover={{ cursor: "pointer", color: "#BA769A" }}
-          fontWeight={700}
-          color="white"
-          href="/browse"
-        >
-          <Link href="/browse">{LOCALE_EN.generic.browse}</Link>
-        </Text>
+                </Text>
+                <Icon
+                    as={RiArrowDropDownLine}
+                    color="#75D275"
+                    boxSize={8}
+                    ml='-10px'
+                  />
+              </Flex>
+            </Flex>
 
-        <Text
+  
+        </Flex>
+      </Flex>
+    </Flex>
+  );
+}
 
-          _hover={{ cursor: "pointer", color: "#BA769A" }}
-          color="white"
-          fontWeight={700}
-          target="_blank"
-          href="https://discord.gg/5SeB8s6859"
-        >
-          <Link href="https://discord.gg/5SeB8s6859" target="_blank">{LOCALE_EN.generic.discord}</Link>
-        </Text>
+export default Header;
 
-        <Text
+            {/* 
+            
+            // This lines of code refers to when the user are not logged on the app
 
-          _hover={{ cursor: "pointer", color: "#BA769A" }}
-          fontWeight={700}
-          color="white"
-          href="/login"
-        >
-          <Link href="/login">{LOCALE_EN.generic.login}</Link>
-        </Text>
+            <Flex >
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                color="#75D275"
+                fontWeight={700}
+                target="_blank"
+                href="https://discord.gg/5SeB8s6859"
+                >
+                <Link href="https://discord.gg/5SeB8s6859" target="_blank">{LOCALE_EN.generic.discord}</Link>
+              </Text>
+              <Text
+                _hover={{ cursor: "pointer", color: "#ffffff" }}
+                fontWeight={700}
+                color="#75D275"
+                href="/login"
+                >
+                <Link href="/login">{LOCALE_EN.generic.login}</Link>
+              </Text>
+            </Flex> */}
+
+
+
         {/* <Flex
           flexDir="row"
           alignItems="center"
@@ -114,9 +174,3 @@ function Header() {
             </MenuList>
           </Menu>
         </Flex> */}
-      </Flex>
-    </Flex>
-  );
-}
-
-export default Header;

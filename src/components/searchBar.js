@@ -25,13 +25,13 @@ function SearchBar() {
         as={AiOutlineSearch}
         _hover={{ opacity: "75%", cursor: "pointer" }} // im lazy
         onClick={(e) => submitSearch(e)}
-        color="#F01B67"
+        color="#94BA76"
         w="24px"
         h="24px"
       />
 
       <Input
-        placeholder="Search"
+        placeholder="Search for avatars, @users, and #tags"
         background="none"
         borderRadius="none"
         padding="19px 8px"
@@ -39,6 +39,7 @@ function SearchBar() {
         outline="none" /* fix outline issue later (outline is present when component is focused 
           and its ugly idk how to fix it and its not important rn) */
         h="100%"
+        w='424px'
         value={query}
         onChange={(e) => setQuery(e.currentTarget.value)}
         onKeyDown={(e) => {
