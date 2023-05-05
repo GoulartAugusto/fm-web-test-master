@@ -206,7 +206,7 @@ function PostPage({ id }) {
               </Flex>
 
               <Button
-                bg="#F01B67"
+                bg="#77DD77F0"
                 mt={5}
                 borderRadius="67px"
                 w="171px"

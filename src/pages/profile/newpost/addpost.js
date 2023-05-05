@@ -52,7 +52,7 @@ function addpost({ id }) {
 
                     <VStack mt={3} spacing={1} w="100%">
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           NSFW:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -66,7 +66,7 @@ function addpost({ id }) {
                       </Flex>
 
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           SDK:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -79,7 +79,7 @@ function addpost({ id }) {
                       </Flex>
 
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           Platform:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -91,7 +91,7 @@ function addpost({ id }) {
                       </Flex>
 
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           Full Body:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -103,7 +103,7 @@ function addpost({ id }) {
                       </Flex>
 
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           Physbones:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -115,7 +115,7 @@ function addpost({ id }) {
                       </Flex>
 
                       <Flex w="100%" alignItems="center" position="relative">
-                        <Text fontWeight={700} color="#F01B67">
+                        <Text fontWeight={700} color="#77DD77">
                           DPS:
                         </Text>
                         <Text position="absolute" right={0}>
@@ -126,7 +126,7 @@ function addpost({ id }) {
                         </Text>
                       </Flex>
                       <Button
-                          bg="#F01B67"
+                          bg="#77DD77"
                           mt={5}
                           borderRadius="67px"
                           w="225px"
@@ -134,7 +134,7 @@ function addpost({ id }) {
                           fontSize="16px"
                           fontWeight={700}
                           leftIcon={<Icon as={AiOutlineUpload} w="24px" h="24px" />}
-                          _hover={{ bg: "#F01B67", opacity: "75%" }}
+                          _hover={{ bg: "#77DD77", opacity: "75%" }}
                         >
                         Upload Avatar
                       </Button>
@@ -228,7 +228,7 @@ function addpost({ id }) {
                     position="absolute"
                     bottom={0}
                     right={0}
-                    color="#F01B67"
+                    color="#77DD77"
                     as="a"
                     fontSize="16px"
                     mt="8px"
@@ -239,7 +239,7 @@ function addpost({ id }) {
                     position="absolute"
                     bottom={0}
                     right={0}
-                    color="#F01B67"
+                    color="#77DD77"
                     fontSize="16px"
                     mt="8px"
                     >Browse files</Text>

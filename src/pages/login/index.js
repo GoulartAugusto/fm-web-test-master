@@ -26,7 +26,7 @@ function LoginPage() {
             <Text
               as="a"
               href="/register"
-              color="#F01B67"
+              color="#94BA76"
               fontWeight={700}
               _hover={{ opacity: "75%" }}
             >
@@ -64,7 +64,7 @@ function LoginPage() {
                 <Checkbox>{LOCALE_EN.login.rememberMe}</Checkbox>
 
                 <Text
-                  color="#F01B67"
+                  color="#94BA76"
                   _hover={{ opacity: "75%" }}
                   as="a"
                   href="/forgot-password"
@@ -79,7 +79,7 @@ function LoginPage() {
                 _hover={{ opacity: "75%" }}
                 _active={{ opacity: "50%" }}
                 mt={5}
-                bg="#F01B67"
+                bg="#77DD77"
                 w="100%"
               >
                 {LOCALE_EN.login.signIn}

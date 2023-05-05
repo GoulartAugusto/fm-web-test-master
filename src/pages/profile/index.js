@@ -152,7 +152,7 @@ function Profile() {
                 Your Uploaded Avatars
             </Text>
 
-          <SimpleGrid mt={3} columns={4}>
+          <SimpleGrid mt={3} columns={4} gap='2rem'>
             {samplePosts.map((post) => {
               return <Post post={post} />;
             })}

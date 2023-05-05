@@ -54,16 +54,16 @@ function Post({ post }) {
       <Text fontSize="18px" mt={3} fontWeight={700}>
         {post.title}
       </Text>
-      <Text fontSize="18px" color="#BA769A">
+      <Text fontSize="18px" color="#94BA76">
         Uploaded by <b>{post.author.username}</b>
       </Text>
       <Flex fontSize="16px" mt={1} alignItems="center">
         <AiOutlineDownload />{" "}
-        <Text ml="4px" mr="4px" fontWeight={350}>
+        <Text ml="6px" mr="14px" fontWeight={350}>
           {post.downloads.toLocaleString()}
         </Text>{" "}
         <AiFillHeart />{" "}
-        <Text fontWeight={350} ml="4px">
+        <Text fontWeight={350} ml="6px" mr="4px">
           {post.likes.toLocaleString()}
         </Text>
       </Flex>

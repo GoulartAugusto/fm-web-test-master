@@ -30,15 +30,15 @@ export default extendTheme({
   },
   colors: {
     brand: {
-      100: "#F01B67",
-      200: "#F01B67",
-      300: "#F01B67",
-      400: "#F01B67",
-      500: "#F01B67",
-      600: "#F01B67",
-      700: "#F01B67",
-      800: "#F01B67",
-      900: "#F01B67",
+      100: "#77DD77",
+      200: "#77DD77",
+      300: "#77DD77",
+      400: "#77DD77",
+      500: "#77DD77",
+      600: "#77DD77",
+      700: "#77DD77",
+      800: "#77DD77",
+      900: "#77DD77",
     },
   },
   components: {
@@ -52,7 +52,7 @@ export default extendTheme({
     },
     Badge: {
       baseStyle: {
-        background: "#F01B67",
+        background: "#77DD77",
         borderRadius: "8px",
         height: "35px",
         display: "flex",

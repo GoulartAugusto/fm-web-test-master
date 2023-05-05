@@ -42,7 +42,7 @@ function Index() {
             </Text>
 
             <Text
-              color="#BA769A"
+              color="#94BA76"
               lineHeight="140.68%"
               fontWeight={400}
               fontSize="18px"
@@ -54,7 +54,7 @@ function Index() {
             <Button
               w="131px"
               borderRadius="67px"
-              bg="#F01B67"
+              bg="#77DD77"
               mt={35}
               rightIcon={<AiOutlineArrowRight />}
               _hover={{ opacity: "75%" }}
@@ -91,7 +91,7 @@ function Index() {
                 </Heading>
 
                 <Text
-                  color="#BA769A"
+                  color="#94BA76"
                   lineHeight="140.68%"
                   fontWeight={400}
                   fontSize="18px"
@@ -117,7 +117,7 @@ function Index() {
                 </Heading>
 
                 <Text
-                  color="#BA769A"
+                  color="#94BA76"
                   lineHeight="140.68%"
                   fontWeight={400}
                   fontSize="18px"
@@ -148,19 +148,19 @@ function Index() {
             <Box mr={150} textAlign='center'>
               <Center><Image src='/assets/dl-landing.png' /></Center>
               <Text mt={5} fontSize='20px' fontWeight={700}>{LOCALE_EN.landing.fasterDownloads}</Text>
-              <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.fDownloadsSlogan}</Text>
+              <Text color='#94BA76' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.fDownloadsSlogan}</Text>
             </Box>
 
             <Box mr={150} textAlign='center'>
               <Center><Image src='/assets/profile-landing.png' /></Center>
               <Text mt={5} fontSize='20px' fontWeight={700}>{LOCALE_EN.landing.moreAvatars}</Text>
-              <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.mAvatarsSlogan}</Text>
+              <Text color='#94BA76' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.mAvatarsSlogan}</Text>
             </Box>
 
             <Box textAlign='center'>
               <Center><Image src='/assets/chat-landing.png' /></Center>
               <Text mt={5} fontSize='20px' fontWeight={700}>{LOCALE_EN.landing.socialFeatures}</Text>
-              <Text color='#BA769A' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.sFeaturesSlogan}</Text>
+              <Text color='#94BA76' mt={5} w='100%' fontSize='18px'>{LOCALE_EN.landing.sFeaturesSlogan}</Text>
             </Box>
           </Flex>
         </Center>
@@ -177,7 +177,7 @@ function Index() {
         >
           <Box textAlign='center'>
             <Heading>{LOCALE_EN.landing.readyToJoin}</Heading>
-            <Button bg='#F01B67' mt={10} borderRadius='67px' p='10px 36px' as="a" href="/register">{LOCALE_EN.landing.cfreeAccount}</Button>
+            <Button bg='#77DD77' mt={10} borderRadius='67px' p='10px 36px' as="a" href="/register">{LOCALE_EN.landing.cfreeAccount}</Button>
 
           </Box>
         </Flex>

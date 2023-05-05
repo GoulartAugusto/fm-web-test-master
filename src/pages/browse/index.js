@@ -64,7 +64,7 @@ function Browse() {
           </FormControl>
 
           <FormControl mt={5}>
-            <FormLabel>NSFW</FormLabel>
+            <FormLabel>SORT ORDER</FormLabel>
 
             <Select
               width="200px"
@@ -75,7 +75,8 @@ function Browse() {
               background="rgba(0, 0, 0, 0.17)"
               icon={<DropdownIcon />}
             >
-              <option value="all">All</option>
+              <option value="all">Descending</option>
+              <option value="all">Ascending</option>
             </Select>
           </FormControl>
 
@@ -132,7 +133,7 @@ function Browse() {
         <Box overflowY="auto" overflowX="none" w="100%">
           <PaginationSelect />
 
-          <SimpleGrid mt={3} columns={[1, 2, 3, 4, 5]}>
+          <SimpleGrid mt={3} columns={[1, 2, 3, 4]} spacing='22px'>
             {samplePosts.map((post) => {
               return <Post post={post} />;
             })}

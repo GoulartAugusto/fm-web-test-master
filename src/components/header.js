@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { RiArrowDropDownLine } from "react-icons/ri";
+import DropdownIcon from "./icon/dropdown";
 import SearchBar from "./searchBar";
 
 // ==================== got to correct behavior on different screen sizes ===============================
@@ -94,12 +94,7 @@ function Header() {
                   Civv
 
                 </Text>
-                <Icon
-                    as={RiArrowDropDownLine}
-                    color="#75D275"
-                    boxSize={8}
-                    ml='-10px'
-                  />
+                <DropdownIcon />
               </Flex>
             </Flex>
 

@@ -194,7 +194,7 @@ function RegisterPage() {
                       _hover={{ opacity: "75%" }}
                       _active={{ opacity: "50%" }}
                       mt={10}
-                      bg="#F01B67"
+                      bg="#77DD77"
                       w="100%"
                       rightIcon={<AiOutlineArrowRight />}
                       onClick={() => {
@@ -255,7 +255,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         leftIcon={<AiOutlineArrowLeft />}
                         onClick={() => setPage(0)}
@@ -267,7 +267,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         rightIcon={<AiOutlineArrowRight />}
                         onClick={() => {
@@ -326,6 +326,7 @@ function RegisterPage() {
                         {!pronouns3Enabled && !pronouns4Enabled ? (
                           <Button
                             w="100%"
+                            bg='#77DD77'
                             colorScheme="brand"
                             _hover={{ opacity: "75%" }}
                             onClick={() => setPronouns3Enabled(true)}
@@ -410,7 +411,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         leftIcon={<AiOutlineArrowLeft />}
                         onClick={() => setPage(1)}
@@ -422,7 +423,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         rightIcon={<AiOutlineArrowRight />}
                         onClick={() => {
@@ -566,7 +567,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         leftIcon={<AiOutlineArrowLeft />}
                         onClick={() => setPage(2)}
@@ -578,7 +579,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         rightIcon={<AiOutlineArrowRight />}
                         onClick={() => {
@@ -610,7 +611,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         leftIcon={<AiOutlineArrowLeft />}
                         onClick={() => setPage(3)}
@@ -622,7 +623,7 @@ function RegisterPage() {
                         _hover={{ opacity: "75%" }}
                         _active={{ opacity: "50%" }}
                         mt={10}
-                        bg="#F01B67"
+                        bg="#77DD77"
                         w="100%"
                         onClick={() => {
                           submitForm();
