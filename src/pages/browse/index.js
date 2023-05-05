@@ -14,6 +14,7 @@ import DropdownIcon from "@/components/icon/dropdown";
 import PaginationSelect from "../../components/paginationSelect";
 import Post from "../../components/post";
 import samplePosts from '../../components/posts/samplePosts'
+import Advertisement from "@/components/advertisement";
 
 function Browse() {
   const [sortMethod, setSortMethod] = useState("popularity");
@@ -29,7 +30,7 @@ function Browse() {
   }, [sortMethod, nsfw, fullBody, platform]);
 
   return (
-    <Box>
+    <Box h='180vh'>
       <Header />
       {/* the app info like images and text are getting overlaid on each other */}
 
@@ -127,6 +128,10 @@ function Browse() {
             >
               <option value="all">All</option>
             </Select>
+          </FormControl>
+
+          <FormControl mt={5}>
+            <Advertisement />
           </FormControl>
         </Box>
 

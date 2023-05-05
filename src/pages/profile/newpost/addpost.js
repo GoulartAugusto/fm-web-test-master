@@ -40,7 +40,6 @@ function addpost({ id }) {
                 <Box
                   p="24px"
                   w="300px"
-                  h="260px"
                   bg="rgba(0, 0, 0, 0.17)"
                   borderRadius="16px"
                   display="flex"
@@ -125,19 +124,21 @@ function addpost({ id }) {
                           </select>
                         </Text>
                       </Flex>
-                      <Button
-                          bg="#77DD77"
-                          mt={5}
-                          borderRadius="67px"
-                          w="225px"
-                          h="52px"
-                          fontSize="16px"
-                          fontWeight={700}
-                          leftIcon={<Icon as={AiOutlineUpload} w="24px" h="24px" />}
-                          _hover={{ bg: "#77DD77", opacity: "75%" }}
-                        >
-                        Upload Avatar
-                      </Button>
+                      <Flex>
+                        <Button
+                            bg="#77DD77"
+                            mt={5}
+                            borderRadius="67px"
+                            w="225px"
+                            h="52px"
+                            fontSize="16px"
+                            fontWeight={700}
+                            leftIcon={<Icon as={AiOutlineUpload} w="24px" h="24px" />}
+                            _hover={{ bg: "#77DD77", opacity: "75%" }}
+                          >
+                          Upload Avatar
+                        </Button>
+                      </Flex>
                     </VStack>
                   </Box>
                 </Box>
