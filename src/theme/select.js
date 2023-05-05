@@ -23,3 +23,5 @@ export const Select = defineMultiStyleConfig({
     variant: "brandPrimary",
   },
 });
+
+export default Select

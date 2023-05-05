@@ -22,3 +22,6 @@ const baseStyle = definePartsStyle({
 export const Input = defineMultiStyleConfig({
   baseStyle,
 });
+
+
+export default Input
