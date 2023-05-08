@@ -1,8 +1,5 @@
 import {
     Box,
-    FormLabel,
-    FormControl,
-    Select,
     Flex,
     SimpleGrid,
     Center,
@@ -11,14 +8,10 @@ import {
   } from "@chakra-ui/react";
 
 import Header from "../../components/header";
-import SearchBar from "../../components/searchBar";
 import { useEffect, useState } from "react";
-import DropdownIcon from "@/components/icon/dropdown";
-import PaginationSelect from "../../components/paginationSelect";
 import Post from "../../components/post";
 import Link from "next/link";
 
-import { LOCALE_EN } from "../../constants/locale";
 
 // This page is only avaliable after login
 

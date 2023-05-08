@@ -89,7 +89,7 @@ function Header() {
               </Text>
 
               <Flex d='flex' flexDir='row' alignItems='center' p='0px' gap='16px' h='48px' flex='none' order='2' flexGrow='0' _hover={{ cursor: "pointer", color: "#ffffff" }}>
-                <Link href="/profile"><Image src='/assets/profile-thumbnail.png' w='48px' h='48px' borderRadius='50%' /></Link>
+                <Link href="/profile"><Avatar src='/assets/profile-thumbnail.png' w='48px' h='48px' borderRadius='50%' /></Link>
                 <Text fontWeight={700} color="#75D275" _hover={{ cursor: "pointer", color: "#ffffff" }}>
                   Civv
 
@@ -97,8 +97,6 @@ function Header() {
                 <DropdownIcon />
               </Flex>
             </Flex>
-
-  
         </Flex>
       </Flex>
     </Flex>

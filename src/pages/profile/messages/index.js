@@ -1,24 +1,14 @@
 import {
   Box,
-  FormLabel,
-  FormControl,
-  Select,
   Flex,
-  SimpleGrid,
-  Center,
   Image,
   Text,
   Input,
   Grid,
-  GridItem
 } from "@chakra-ui/react";
 
 import Header from "@/components/header";
-import SearchBar from "@/components/searchBar";
 import { useEffect, useState } from "react";
-import DropdownIcon from "@/components/icon/dropdown";
-import PaginationSelect from "@/components/paginationSelect";
-import Post from "@/components/post";
 import Link from "next/link";
 
 function Messages() {
@@ -31,7 +21,7 @@ function Messages() {
     <Box>
       <Header />
 
-              <Text fontSize="22px" ml={8} fontWeight={700} textAlign='start'>Messages</Text>
+        <Text fontSize="22px" ml={8} fontWeight={700} textAlign='start'>Messages</Text>
         <Flex>
           <Box>
             <Grid ml={8}>
