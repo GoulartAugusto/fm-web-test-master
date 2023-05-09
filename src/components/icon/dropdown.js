@@ -6,8 +6,8 @@ function DropdownIcon() {
       <path
         d="M1 1L7.5 7L14 1"
         stroke="#77DD77"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </Icon>
   );

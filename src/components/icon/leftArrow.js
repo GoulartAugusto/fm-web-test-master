@@ -6,8 +6,8 @@ function LeftArrowIcon() {
       <path
         d="M10 2L3 10L10 18"
         stroke="#77DD77"
-        stroke-width="4"
-        stroke-linecap="round"
+        strokeWidth="4"
+        strokeLinecap="round"
       />
     </Icon>
   );

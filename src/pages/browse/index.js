@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 
 import Header from "../../components/header";
-import SearchBar from "../../components/searchBar";
 import { useEffect, useState } from "react";
 import DropdownIcon from "@/components/icon/dropdown";
 import PaginationSelect from "../../components/paginationSelect";
@@ -22,90 +21,6 @@ function Browse() {
   const [platform, setPlatform] = useState("all");
 
   const samplePosts = [
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
-    {
-      id: "test",
-      title: "Amari",
-      platform: "quest",
-      author: {
-        id: 0,
-        username: "Loved",
-      },
-      downloads: 10392,
-      likes: 2943,
-      thumbnail: "/assets/demo/amari.png",
-    },
     {
       id: "test",
       title: "Amari",
@@ -235,9 +150,9 @@ function Browse() {
         <Box overflowY="auto" overflowX="none" w="100%">
           <PaginationSelect />
 
-          <SimpleGrid mt={3} columns={[1, 2, 3, 4]} spacing='22px'>
+          <SimpleGrid mt={3} columns={[1, 2, 3, 4]}>
             {samplePosts.map((post) => {
-              return <Post post={post} />;
+              return <Post post={post} key={post.id} />;
             })}
           </SimpleGrid>
         </Box>

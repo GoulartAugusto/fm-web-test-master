@@ -3,22 +3,6 @@ import Link from "next/link";
 import { AiOutlineDownload, AiFillHeart } from "react-icons/ai";
 
 function Post({ post }) {
-  /*
-    sample post object:
-
-    {
-        platform: "quest",
-        title: "Amari",
-        author: {
-            id: 0,
-            username: "Loved",
-        },
-        downloads: 10392,
-        likes: 2943,
-        thumbnail: "",
-    }
-  */
-
   return (
     <Box w="280px" h="366px" position="relative">
       <Box

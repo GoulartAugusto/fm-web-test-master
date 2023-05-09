@@ -8,15 +8,9 @@ import {
 } from "@chakra-ui/react";
 
 import Header from "@/components/header";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 function Messages() {
-  const [sortMethod, setSortMethod] = useState("popularity");
-  const [nsfw, setNSFW] = useState("all");
-  const [fullBody, setFullBody] = useState(true); // boolean
-  const [platform, setPlatform] = useState("all");
-  
   return (
     <Box>
       <Header />
