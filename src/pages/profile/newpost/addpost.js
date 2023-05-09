@@ -158,11 +158,11 @@ function addpost({ id }) {
 
             <Box>
               <Heading>
-                <Input type="text" size='lg' placeholder="Avatar Name" />
+                <Input type="text" size='lg' w='400px' placeholder="Avatar Name" />
               </Heading>
 
               <Flex mt={5} alignItems="center" gap="16px">
-                <Input type="text" placeholder="Type some tags" />
+                <Input type="text" w='400px' placeholder="Type some tags" />
               </Flex>
 
               <Flex mt={5} alignItems="center" gap="16px">
@@ -249,11 +249,11 @@ function addpost({ id }) {
               </Flex>
 
               <Box bg="rgba(0, 0, 0, 0.17)" borderRadius="16px" p="24px" mt={7}>
-                <Text fontSize="18px" fontWeight={700}>
+                <Text fontSize="18px" fontWeight={700} mb='1.5rem'>
                   Description
                 </Text>
 
-                <Text color="#BA769A" mt={2} width="700px">
+                <Text color="#BA769A" mt={2} w="500px">
                   <Textarea
                     type="text"
                     h='162px'
